@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      table,
+      th,
+      td {
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        text-align: left;
+        padding: 12px;
+      }
+      h2 {
+        margin: 30px 0px;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      form {
+        background-color: bisque;
+        padding: 25px;
+        border-radius: 7px;
+      }
+    </style>
+    <title>Student Registration Form</title>
+  </head>
+  <body>
+    <h2>Student Registration Form</h2>
+    <form>
+      <table>
+        <tr>
+          <th><label for="fname">First Name</label></th>
+          <td>
+            <input
+              type="text"
+              name="first-name"
+              id="fname"
+              placeholder="Enter First Name"
+            />
+          </td>
+        </tr>
+        <tr>
+          <th><label for="lname">Last Name</label></th>
+          <td>
+            <input
+              type="text"
+              id="lname"
+              name="last-name"
+              placeholder="Enter Last Name"
+            />
+          </td>
+        </tr>
+        <tr>
+          <th><label for="student-id">ID</label></th>
+          <td>
+            <input
+              type="number"
+              name="id"
+              id="student-id"
+              placeholder="Enter Student ID"
+            />
+          </td>
+        </tr>
+        <tr>
+          <th><label for="email">Email</label></th>
+          <td>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter Email"
+            />
+          </td>
+        </tr>
+        <tr>
+          <th><label for="password">Password</label></th>
+          <td>
+            <input
+              type="password"
+              id="password"
+              name="pass"
+              placeholder="Enter Password"
+            />
+          </td>
+        </tr>
+        <tr>
+          <th><label for="dob">Date of Birth</label></th>
+          <td>
+            <input
+              type="date"
+              id="dob"
+              name="dob"
+              placeholder="Enter Date of Birth"
+            />
+          </td>
+        </tr>
+        <tr>
+          <th>Gender</th>
+          <td>
+            <input type="radio" id="male" name="gender" value="Male" />
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female" />
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="Other" />
+            <label for="other">Other</label>
+          </td>
+        </tr>
+        <tr>
+          <th>Skills</th>
+          <td>
+            <input type="checkbox" name="skill-1" value="HTML" id="skill-1" />
+            <label for="skill-1">HTML</label>
+            <input type="checkbox" name="skill-2" value="CSS" id="skill-2" />
+            <label for="skill-2">CSS</label>
+            <input
+              type="checkbox"
+              name="skill-3"
+              value="JAVA Script"
+              id="skill-3"
+            />
+            <label for="skill-3">Java Script</label>
+          </td>
+        </tr>
+        <tr>
+          <th><label for="dept">Department</label></th>
+          <td>
+            <select name="department" id="dept">
+              <option value="CSE">CSE</option>
+              <option value="EEE">EEE</option>
+              <option value="BBA">BBA</option>
+              <option value="IPE">IPE</option>
+              <option value="Architecture">Architecture</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th><label for="address">Address</label></th>
+          <td>
+            <textarea
+              name="address"
+              id="address"
+              placeholder="Enter your address"
+            ></textarea>
+          </td>
+        </tr>
+        <tr>
+          <th><label for="propic">Picture</label></th>
+          <td>
+            <input type="file" id="propic" name="propic" />
+          </td>
+        </tr>
+        <tr>
+          <th>&nbsp;</th>
+          <td>
+            <input type="button" value="Button" />
+            <input type="Submit" />
+            <input type="reset" />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
