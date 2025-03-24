@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      function validate() {
+        let genders = document.getElementsByName("gender");
+
+        for (let i = 0; i < genders.length; i++) {
+          if (genders[i].checked) {
+            alert("Registration Successful");
+            return true;
+          }
+        }
+
+        alert("Select Gender");
+        return false;
+      }
+    </script>
+    <title>Gender</title>
+  </head>
+  <body>
+    <form action="#" method="post" enctype="" onsubmit="return validate()">
+      <fieldset>
+        <table>
+          <legend>Gender</legend>
+          <tr>
+            <td>
+              <input type="radio" id="male" name="gender" value="Male" />
+              <label for="male">Male</label>
+            </td>
+            <td>
+              <input type="radio" id="female" name="gender" value="Female" />
+              <label for="female">Female</label>
+            </td>
+            <td>
+              <input type="radio" id="other" name="gender" value="Other" />
+              <label for="other">Other</label>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <input type="Submit" value="Submit" />
+    </form>
+  </body>
+</html>

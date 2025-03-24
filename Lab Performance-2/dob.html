@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      function validate() {
+        let day = document.getElementById("day").value;
+        let month = document.getElementById("month").value;
+        let year = document.getElementById("year").value;
+
+        if (
+          day == null ||
+          day == "" ||
+          month == null ||
+          month == "" ||
+          year == null ||
+          year == ""
+        ) {
+          alert("Please select a valid date");
+          return false;
+        } else if (day < 0 || day > 31) {
+          alert("Please select a valid date");
+          return false;
+        } else if (month < 1 || month > 12) {
+          alert("Please select a valid date");
+          return false;
+        }
+        if (year < 1900 || year > 2016) {
+          alert("Please select a valid date");
+          return false;
+        }
+
+        alert("Registration Successful");
+        return true;
+      }
+    </script>
+    <title>Date of Birth</title>
+  </head>
+  <body>
+    <form action="#" method="post" enctype="" onsubmit="return validate()">
+      <fieldset>
+        <table>
+          <legend>Date of Birth</legend>
+          <tr>
+            <th>
+              <label for="day">dd</label>
+            </th>
+            <td></td>
+            <th>
+              <label for="month">mm</label>
+            </th>
+            <td></td>
+            <th>
+              <label for="year">yyyy</label>
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <input type="number" id="day" name="day" value="" />
+            </td>
+            <td><p>/</p></td>
+            <td>
+              <input type="number" id="month" name="month" value="" />
+            </td>
+            <td><p>/</p></td>
+            <td>
+              <input type="number" id="year" name="year" value="" />
+            </td>
+          </tr>
+        </table>
+        <hr />
+        <input type="Submit" value="Submit" />
+      </fieldset>
+    </form>
+  </body>
+</html>

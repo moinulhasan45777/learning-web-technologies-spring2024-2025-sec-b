@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      function validate() {
+        let degree = document.getElementsByName("degree");
+
+        for (let i = 0; i < degree.length; i++) {
+          if (degree[i].checked) {
+            alert("Registration Successful");
+            return true;
+          }
+        }
+
+        alert("Select Degree");
+        return false;
+      }
+    </script>
+    <title>Degree</title>
+  </head>
+  <body>
+    <form action="#" method="post" enctype="" onsubmit="return validate()">
+      <fieldset>
+        <table>
+          <legend>Degree</legend>
+          <tr>
+            <td>
+              <input type="checkbox" id="ssc" name="degree" value="ssc" />
+              <label for="ssc">SSC</label>
+            </td>
+            <td>
+              <input type="checkbox" id="hsc" name="degree" value="HSC" />
+              <label for="hsc">HSC</label>
+            </td>
+            <td>
+              <input type="checkbox" id="BSc" name="degree" value="BSc" />
+              <label for="other">BSc</label>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <input type="Submit" />
+    </form>
+  </body>
+</html>

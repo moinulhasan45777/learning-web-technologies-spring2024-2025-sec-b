@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      function validate() {
+        let email = document.getElementById("email").value;
+
+        if (email.length == 0) {
+          alert("Email cannot be empty");
+          return false;
+        }
+        alert("Registration Successful");
+        return true;
+      }
+    </script>
+    <title>Email</title>
+  </head>
+  <body>
+    <form action="#" method="post" enctype="" onsubmit="return validate()">
+      <table>
+        <tr>
+          <td>
+            <strong><label for="email">Email</label></strong>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              value=""
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><input type="Submit" value="Submit" /></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
