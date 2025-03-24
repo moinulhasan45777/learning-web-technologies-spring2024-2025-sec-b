@@ -3,12 +3,23 @@
   <head>
     <script>
       function validate() {
-        let email = document.getElementById("email").value;
+        let uid = document.getElementById("uid").value;
+        let pp = document.getElementById("pic");
 
-        if (email.length == 0) {
-          alert("Email cannot be empty");
+        if (uid == "" || uid == null) {
+          alert("Enter User Id");
           return false;
         }
+        if (uid <= 0) {
+          alert("Enter an User ID that's greater than 0");
+          return false;
+        }
+
+        if (pp.files.length === 0) {
+          alert("Please select a profile picture!");
+          return false;
+        }
+
         alert("Registration Successful");
         return true;
       }
@@ -26,7 +37,15 @@
               <input type="number" id="uid" name="uid" value="" />
             </td>
           </tr>
+          <tr>
+            <td>
+              <label for="pic">Picture</label>
+            </td>
+            <td><input type="file" id="pic" name="pic" /></td>
+          </tr>
         </table>
+        <hr />
+        <input type="Submit" value="Submit" />
       </fieldset>
     </form>
   </body>
