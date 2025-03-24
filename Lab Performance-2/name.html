@@ -31,8 +31,8 @@
 
         if (
           !(
-            (charCodeAt(name[0]) >= 97 && charCodeAt(name[0]) <= 122) ||
-            (charCodeAt(name[0]) >= 65 && charCodeAt(name[0]) <= 90)
+            (name.charCodeAt(0) >= 97 && name.charCodeAt(0) <= 122) ||
+            (name.charCodeAt(0) >= 65 && name.charCodeAt(0) <= 90)
           )
         ) {
           alert("Name must start with a letter");
@@ -65,7 +65,7 @@
           </td>
         </tr>
         <tr>
-          <td><input type="Submit" value="Submit"/></td>
+          <td><input type="Submit" value="Submit" /></td>
         </tr>
       </table>
     </form>
