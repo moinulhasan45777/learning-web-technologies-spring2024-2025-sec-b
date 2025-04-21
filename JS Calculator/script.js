@@ -2,6 +2,7 @@ const display = document.getElementById("display");
 let tempValue = 0;
 let lastPressed = "";
 let resultPressed = false;
+let lastNumber = 0;
 
 const number0 = document.getElementById("number-0");
 const number1 = document.getElementById("number-1");
@@ -131,7 +132,7 @@ subButton.addEventListener("click", function () {
   if (resultPressed) {
     tempValue = tempValue;
   } else {
-    tempValue = tempValue - Number(display.value);
+    tempValue = Number(display.value);
   }
   display.value = "0";
   lastPressed = "subtraction";
@@ -156,19 +157,31 @@ divButton.addEventListener("click", function () {
 });
 resultButton.addEventListener("click", function () {
   if (lastPressed === "addition") {
-    tempValue = tempValue + Number(display.value);
+    if (resultPressed === false) {
+      lastNumber = Number(display.value);
+    }
+    tempValue = tempValue + lastNumber;
     display.value = tempValue;
     resultPressed = true;
   } else if (lastPressed === "subtraction") {
-    tempValue = tempValue - Number(display.value);
+    if (resultPressed === false) {
+      lastNumber = Number(display.value);
+    }
+    tempValue = tempValue - lastNumber;
     display.value = tempValue;
     resultPressed = true;
   } else if (lastPressed === "multiplication") {
-    tempValue = tempValue * Number(display.value);
+    if (resultPressed === false) {
+      lastNumber = Number(display.value);
+    }
+    tempValue = tempValue * lastNumber;
     display.value = tempValue;
     resultPressed = true;
   } else if (lastPressed === "division") {
-    tempValue = tempValue / Number(display.value);
+    if (resultPressed === false) {
+      lastNumber = Number(display.value);
+    }
+    tempValue = tempValue / lastNumber;
     display.value = tempValue;
     resultPressed = true;
   }
